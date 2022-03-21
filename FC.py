@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+'''
+This is a fully connected neural network. 
+It contains data batching , using Relu activation function,
+using adam optimizer and dropout for overfitting.
+'''
 
 import torch
 import pandas as pd
@@ -142,7 +147,7 @@ y_pred_tensor = saved_model(x_test_tensor)
 y_pred = y_pred_tensor.detach().numpy()
 '''
 
-#comparing the predicted and actual values based with plot
+#comparing the predicted and actual values with plot
 plt.figure(figsize=(12, 8))
 plt.plot(y_pred, label='Predicted count')
 plt.plot(y_test.values, label='Actual count')
