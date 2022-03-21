@@ -1,4 +1,9 @@
 '''
+We get cifar10 dataset , devide it to train,test, validation and dev.
+Then we normalize it by subtracting the mean image and add bias to the dataset.
+'''
+
+'''
 The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with
 6000 images per class. There are 50000 training images and 10000 test images.
 The classes contain: airplane, automobile, bird, cat, deer, dog, frog, horse,
