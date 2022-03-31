@@ -1,6 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-
+We try to load MNIST dataset and make a model to predict the classes of this dataset.
+We use two convolution layers and three fully connected layers, use relu activation
+function in each layer and use max pooling after two conv layers. we use data 
+batching with small batches. we train our model with cross entropy and adam optimization
+we evaluate our dataset with confusion matrix, precision and recall.
+we can track the missed predictions. And at the end we predict a class for an image
 """
 
 import torch
