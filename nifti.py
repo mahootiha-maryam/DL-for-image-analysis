@@ -5,6 +5,10 @@ NIFTI files. The other formt for medical images is DICOM but because working wit
 NIFTI is easier we convert DICOM files to NIFTI files.
 In this code we try to load DICOM files convert them to NIFIT, show them with matplotlib
 and save anrray as a NIFTI file
+A nibabel image is the association of three things:
+1:The image data array: a 3D or 4D array of image data
+2:An affine array that tells you the position of the image array data in a reference space.
+3:image metadata (data about the data) describing the image, usually in the form of an image header.
 """
 import dicom2nifti
 from pathlib import Path
