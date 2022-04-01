@@ -1,8 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-NIFTI is a format for medical images. We use nibabel library for processing
-NIFTI files. The other formt for medical images is DICOM but because working with
-NIFTI is easier we convert DICOM files to NIFTI files.
+NIFTI is a format for medical images.
+NIFTI image is a 3d image of an organ it has three dimensions that are related to the 
+three view we can have :1)axial 2)coronal 3)saggital.
+We don't have patients data in NIFTI just we have some information about image in header
+We use nibabel library for processing NIFTI files.
+The other formt for medical images is DICOM it contains differnet slices of organs but because
+working with NIFTI is easier we convert DICOM files to NIFTI files(one file contains all of slides)
 In this code we try to load DICOM files convert them to NIFIT, show them with matplotlib
 and save anrray as a NIFTI file
 A nibabel image is the association of three things:
@@ -11,7 +15,6 @@ A nibabel image is the association of three things:
 3:image metadata (data about the data) describing the image, usually in the form of an image header.
 """
 import dicom2nifti
-from pathlib import Path
 import os
 
 os.chdir(r'C:\Users\Asus\Documents\py-torch\AI-IN-MEDICAL-MATERIALS\03-Data-Formats')
